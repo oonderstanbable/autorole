@@ -64,15 +64,4 @@ async def update_ignore_list_on_server(con):
 
 
 
-
-no=[]
-@bot.command(pass_context=True)
-async def ok(con):
-    no.append(con.message.author.id)
-    await bot.say(no)
-
-
-
-
-
 bot.run(bot_token)
