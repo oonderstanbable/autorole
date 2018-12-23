@@ -8,7 +8,7 @@ igs=[]
 
 async def get_ignore_list():
     while True:
-        r = rq.get('https://jsonblob.com/api/c3dfe0c3-066a-11e9-bcad-bdb84d27a1c3')
+        r = rq.get('your jsonblob url')
         if r.status_code == 200: # request was successful
             igs.append(r.json()) #appends the data that is converted into json
             break #break the loop
@@ -49,7 +49,7 @@ async def on(con,user:discord.Member):
 @bot.command(pass_context=True)
 async def update_ignore_list_on_server():
     while True:
-        p = rq.put('https://jsonblob.com/api/c3dfe0c3-066a-11e9-bcad-bdb84d27a1c3',data=json.dumps(igs[0]))
+        p = rq.put('your jsonblob url',data=json.dumps(igs[0]))
         if p.status_code == 200:
             await bot.say("Data has been updated on the web server database")
             break
