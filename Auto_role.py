@@ -1,11 +1,7 @@
 import discord
 from discord.ext import commands
 import asyncio
-import random
 from discord.utils import find,get
-import requests as rq
-import json
-import os
 
 
 bot=commands.Bot(command_prefix='a.')
