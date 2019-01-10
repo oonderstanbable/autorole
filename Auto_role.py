@@ -18,7 +18,7 @@ async def on_ready():
 
 @bot.event
 async def on_member_join(user):
-    role=find(lambda m:m.name == 'Role Name here',user.server.roles)
+    role=find(lambda m:m.name == 'Members',user.server.roles)
     await bot.add_roles(user,role)
 
 
