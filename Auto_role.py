@@ -36,4 +36,4 @@ async def get_role(con,role:discord.Role):
         await bot.say("Bot could not add that role")
 
 
-bot.run('bot_token_here')
+bot.run('BOT_TOKEN')
